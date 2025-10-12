@@ -7,7 +7,7 @@
 
 > A modern, responsive portfolio website showcasing my software engineering expertise, projects, and professional journey.
 
-**🌐 Live Site:** [https://yourusername.github.io](https://yourusername.github.io)
+**🌐 Live Site:** [https://yourusername.github.io](https://habinezamerci.github.io)
 
 ---
 
@@ -15,7 +15,7 @@
 
 I'm a **Software Engineer** specializing in:
 - ☁️ **Cloud Infrastructure** (Azure, Google Cloud)
-- 📱 **Mobile App Development** (React, Flutter)
+- 📱 **App and Website Development** (React, Flutter)
 - 🔧 **Embedded Systems** (C, IoT)
 - 🎨 **UI/UX Design** (Figma)
 - 📊 **Data Visualization** (Looker Studio)

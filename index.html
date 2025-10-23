@@ -89,7 +89,7 @@
       "addressRegion": "Kanagawa",
       "addressCountry": "Japan"
     },
-    "email": "habmercima@gmail.com",
+    "email": "habineza2002@gmail.com",
     "telephone": "+81-80-2531-7006",
     "knowsAbout": [
       "Software Engineering",
@@ -121,7 +121,7 @@
       "addressCountry": "Japan"
     },
     "telephone": "+81-80-2531-7006",
-    "email": "habmercima@gmail.com",
+    "email": "habineza2002@gmail.com",
     "priceRange": "$$",
     "openingHours": "Mo-Fr 09:00-18:00",
     "areaServed": {
@@ -250,7 +250,6 @@
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>2002</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>SNS:</strong> <span>reli_photography__</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>X|Twitter</strong> <span>https://x.com/merci183027?s=21</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Tokyo, Japan</span></li>
@@ -258,9 +257,8 @@
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>23</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>habmercima@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>habineza2002@gmail.com</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
                 </ul>
               </div>
@@ -453,7 +451,6 @@
               <p><em>Innovative and deadline-driven Software Engineer with experience in developing robust software solutions that bridge cloud infrastructure with user-facing applications from initial concept to final, polished deliverable.</em></p>
               <ul>
                 <li>Kawasaki, Kanagawa, Japan</li>
-                <li>+81 80-2531-7006</li>
                 <li>habineza2002@gmail.com</li>
               </ul>
             </div><!-- Edn Resume Item -->
@@ -917,7 +914,7 @@
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email Us</h3>
-                  <p>habmercima@gmail.com</p>
+                  <p>habineza2002@gmail.com</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -926,41 +923,39 @@
           </div>
 
           <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form id="contact-form" action="https://formspree.io/f/xdkwrrgg" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
                   <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                  <input type="text" name="name" id="name-field" class="form-control" required>
                 </div>
 
                 <div class="col-md-6">
                   <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                  <input type="email" class="form-control" name="email" id="email-field" required>
                 </div>
 
                 <div class="col-md-12">
                   <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                  <input type="text" class="form-control" name="subject" id="subject-field" required>
                 </div>
 
                 <div class="col-md-12">
                   <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required></textarea>
                 </div>
 
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                  <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-                    <i class="bi bi-linkedin flex-shrink-0"></i>
-                    <div>
-                      <h3>LinkedIn</h3>
-                      <p><a href="https://www.linkedin.com/in/marie-merci-habineza-81b56217a/" target="_blank" rel="noopener">Connect on LinkedIn</a></p>
-                    </div>
-                  </div>
+                <!-- Honeypot for spam protection -->
+                <input type="text" name="_gotcha" style="display:none">
+                
+                <!-- Hidden field to set your email -->
+                <!-- <input type="hidden" name="_to" value="habineza2002@gmail.com"> -->
 
+                <div class="col-md-12 text-center">
+                  <div class="loading" style="display:none;">Sending...</div>
+                  <div class="error-message" style="display:none;">Something went wrong. Please try again.</div>
+                  <div class="sent-message" style="display:none;">Your message has been sent. Thank you!</div>
                   <button type="submit">Send Message</button>
                 </div>
 
@@ -991,22 +986,91 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
+  <!-- Formspree Contact Form Handler -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contact-form');
+  
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      const loading = form.querySelector('.loading');
+      const errorMessage = form.querySelector('.error-message');
+      const sentMessage = form.querySelector('.sent-message');
+      const submitButton = form.querySelector('button[type="submit"]');
+      
+      // Show loading, hide other messages
+      loading.style.display = 'block';
+      errorMessage.style.display = 'none';
+      sentMessage.style.display = 'none';
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+      
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        
+        loading.style.display = 'none';
+        
+        if (response.ok) {
+          // Success!
+          sentMessage.style.display = 'block';
+          sentMessage.textContent = 'Your message has been sent successfully. Thank you!';
+          form.reset();
+          submitButton.textContent = 'Send Message';
+          
+          // Hide success message after 8 seconds
+          setTimeout(() => {
+            sentMessage.style.display = 'none';
+          }, 8000);
+        } else {
+          // Error response from Formspree
+          const data = await response.json();
+          errorMessage.style.display = 'block';
+          
+          if (data.errors) {
+            errorMessage.textContent = data.errors.map(error => error.message).join(', ');
+          } else {
+            errorMessage.textContent = 'Something went wrong. Please try again or email me at habineza2002@gmail.com';
+          }
+          submitButton.textContent = 'Send Message';
+        }
+      } catch (error) {
+        // Network error
+        loading.style.display = 'none';
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = 'Network error. Please check your connection and try again.';
+        submitButton.textContent = 'Send Message';
+        console.error('Form submission error:', error);
+      }
+      
+      submitButton.disabled = false;
+    });
+  }
+});
+</script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/typed.js/typed.umd.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
 
 </body>
-
 </html>

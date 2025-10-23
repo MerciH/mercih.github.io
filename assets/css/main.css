@@ -1267,9 +1267,66 @@ section,
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+
+/* Language Switcher Styling */
+.language-switcher {
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.language-switcher a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.language-switcher a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.language-switcher a[style*="font-weight: bold"] {
+  color: #0563bb !important;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Language Switcher Styling */
+.language-switcher {
+  padding: 10px 0;
+  margin: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.language-switcher a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.language-switcher a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.language-switcher a[style*="font-weight: bold"] {
+  color: #0563bb !important;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Language switcher active state */
+.language-switcher a.active {
+  color: #0563bb;
+  background: rgba(255, 255, 255, 0.15);
+  font-weight: bold;
 }

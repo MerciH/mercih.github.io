@@ -164,13 +164,11 @@ Interactive dashboards transforming raw data into strategic insights.
 
 ## 📫 Contact & Connect
 
-- 📧 **Email:** [habmercima@gmail.com](mailto:habmercima@gmail.com)
-- 📱 **Phone:** +81 80-2531-7006
 - 💼 **LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
 - 🐦 **Twitter/X:** [@merci183027](https://x.com/merci183027)
 - 📸 **Instagram:** [@merci.habineza](https://instagram.com/merci.habineza)
 - 📷 **Photography:** [@reli_photography__](https://instagram.com/reli_photography__)
-- 🌐 **Portfolio:** [https://yourusername.github.io](https://yourusername.github.io)
+- 🌐 **Portfolio:** [https://mercih.github.io](https://mercih.github.io)
 
 ---
 
